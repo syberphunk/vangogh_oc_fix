@@ -33,6 +33,11 @@ BAD™.
 
 Type the following into a terminal:
 - `sudo steamos-readonly disable`
+- `sudo steamos-devmode enable`
+
+If you are on SteamOS 3.6 you will need to type:
+- `sudo steamos-unminimize --dev`
+
 - `sudo pacman -Sy base-devel`
 
 Now we need to know what header packages to install.
@@ -51,12 +56,14 @@ Which will give you the output such as:
 This will tell us the package names that relate to our kernel version.
 We want the ones that match, so in our example, we're running neptune-61, we type:
 
-- sudo pacman -S linux-neptune-61 linux-neptune-61-headers`
+- `sudo pacman -S linux-neptune-61 linux-neptune-61-headers`
 
 Now, onto installing the fix. By default SteamOS will put you into the `/home/deck` folder.
 Using the commands `cd` and `pwd` you can change directory, and also check what directory
 you are in, to be able to navigate to where you have extracted or cloned this repo to.
+
 If you're unsure how to do this, [learn more about the terminal](https://ubuntu.com/tutorials/command-line-for-beginners).
+
 Once you're in the correct folder, you can install with:
 
 - `./install.sh`
